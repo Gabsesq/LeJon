@@ -47,6 +47,35 @@ import SportsGuards from './pages/services/general/SportsGuards';
 import TMJTreatments from './pages/services/general/TMJTreatments';
 import ToothExtractions from './pages/services/general/ToothExtractions';
 
+// Import medspa pages
+import Botox from './pages/services/medspa/Botox';
+import Morpheus8 from './pages/services/medspa/Morpheus8';
+import DermalFillers from './pages/services/medspa/DermalFillers';
+import Diolaze from './pages/services/medspa/Diolaze';
+import Forma from './pages/services/medspa/Forma';
+import HormoneTherapy from './pages/services/medspa/HormoneTherapy';
+import Lumecca from './pages/services/medspa/Lumecca';
+import VitaminTherapy from './pages/services/medspa/VitaminTherapy';
+import WeightLoss from './pages/services/medspa/WeightLoss';
+
+// Add these imports
+import DentalFillings from './pages/services/restorative/DentalFillings';
+import DentalBridges from './pages/services/restorative/DentalBridges';
+import DentalCrowns from './pages/services/restorative/DentalCrowns';
+import ImplantRestorations from './pages/services/restorative/ImplantRestorations';
+import InlaysOnlays from './pages/services/restorative/InlaysOnlays';
+import Dentures from './pages/services/restorative/Dentures';
+
+// Add these imports
+import NitrousOxide from './pages/services/sedation/NitrousOxide';
+import OralConscious from './pages/services/sedation/OralConscious';
+
+// Add new resource imports
+import Career from './pages/resources/Career';
+import Financial from './pages/resources/Financial';
+import PatientSpecials from './pages/resources/PatientSpecials';
+import Reviews from './pages/resources/Reviews';
+
 function App() {
   return (
     <Router>
@@ -83,17 +112,42 @@ function App() {
               <Route path="tmj" element={<TMJTreatments />} />
               <Route path="extractions" element={<ToothExtractions />} />
             </Route>
-            <Route path="/services/medspa" element={<Medspa />} />
-            <Route path="/services/orthodontic" element={<OrthodonticTreatments />} />
-            <Route path="/services/restorative" element={<RestorativeDentistry />} />
-            <Route path="/services/sedation" element={<SedationDentistry />} />
+            <Route path="/services/medspa" element={<Medspa />}>
+              <Route path="botox" element={<Botox />} />
+              <Route path="morpheus8" element={<Morpheus8 />} />
+              <Route path="dermal-fillers" element={<DermalFillers />} />
+              <Route path="diolaze" element={<Diolaze />} />
+              <Route path="forma" element={<Forma />} />
+              <Route path="hormone-therapy" element={<HormoneTherapy />} />
+              <Route path="lumecca" element={<Lumecca />} />
+              <Route path="vitamin-therapy" element={<VitaminTherapy />} />
+              <Route path="weight-loss" element={<WeightLoss />} />
+            </Route>
+            <Route path="/services/orthodontic" element={<OrthodonticTreatments />}>
+              <Route path="invisalign" element={<Invisalign />} />
+              <Route path="six-month-smiles" element={<SixMonthSmiles />} />
+            </Route>
+            <Route path="/services/restorative" element={<RestorativeDentistry />}>
+              <Route path="fillings" element={<DentalFillings />} />
+              <Route path="bridges" element={<DentalBridges />} />
+              <Route path="crowns" element={<DentalCrowns />} />
+              <Route path="implants" element={<ImplantRestorations />} />
+              <Route path="inlays-onlays" element={<InlaysOnlays />} />
+              <Route path="dentures" element={<Dentures />} />
+            </Route>
+            <Route path="/services/sedation" element={<SedationDentistry />}>
+              <Route path="nitrous-oxide" element={<NitrousOxide />} />
+              <Route path="oral-conscious" element={<OralConscious />} />
+            </Route>
             <Route path="/services/sleep-apnea" element={<SleepApnea />} />
-            <Route path="/resources" element={<PatientResources />} />
+            <Route path="/resources" element={<PatientResources />}>
+              <Route path="career" element={<Career />} />
+              <Route path="financial" element={<Financial />} />
+              <Route path="forms" element={<PatientForms />} />
+              <Route path="specials" element={<PatientSpecials />} />
+              <Route path="reviews" element={<Reviews />} />
+            </Route>
             <Route path="/contact" element={<Contact />} />
-            <Route path="/resources/new-patients" element={<NewPatients />} />
-            <Route path="/resources/insurance" element={<Insurance />} />
-            <Route path="/resources/forms" element={<PatientForms />} />
-            <Route path="/resources/faq" element={<FAQ />} />
           </Routes>
           <Footer />
         </div>

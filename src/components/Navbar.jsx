@@ -1,6 +1,29 @@
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
+const resourcesDropdown = [
+  {
+    name: "Career Opportunities",
+    path: "/resources/career"
+  },
+  {
+    name: "Financial Options",
+    path: "/resources/financial"
+  },
+  {
+    name: "Patient Forms",
+    path: "/resources/forms"
+  },
+  {
+    name: "Patient Specials",
+    path: "/resources/specials"
+  },
+  {
+    name: "Reviews",
+    path: "/resources/reviews"
+  }
+];
+
 const Navbar = () => {
   return (
     <nav className="navbar">
@@ -33,10 +56,11 @@ const Navbar = () => {
           <div className="dropdown">
             <span className="dropdown-trigger">Patient Resources</span>
             <div className="dropdown-content">
-              <Link to="/resources/new-patients">New Patients</Link>
-              <Link to="/resources/insurance">Insurance & Financing</Link>
-              <Link to="/resources/forms">Patient Forms</Link>
-              <Link to="/resources/faq">FAQ</Link>
+              {resourcesDropdown.map((item) => (
+                <Link key={item.path} to={item.path}>
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
           <Link to="/contact">Contact</Link>

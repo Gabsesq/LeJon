@@ -37,14 +37,14 @@ export function Scene3D() {
         >
           <Model 
             url="/toothbrush.1.glb" 
-            position={[-5, 70, 0]}
+            position={[80, 100, 0]}
             scale={3}
             rotation={[Math.PI / 10, 1, Math.PI / 10]}
         
           />
           <Model 
             url="/tube_3d.glb" 
-            position={[5, -80, 120]}
+            position={[-40, -80, 120]}
             scale={200}
             rotation={[0, Math.PI / 3, -Math.PI / 6]}
           />
