@@ -28,6 +28,25 @@ import Insurance from './pages/resources/Insurance';
 import PatientForms from './pages/resources/PatientForms';
 import FAQ from './pages/resources/FAQ';
 
+// Import technology pages
+import DigitalXrays from './pages/services/technology/DigitalXrays';
+import IntraoralScanner from './pages/services/technology/IntraoralScanner';
+import SoftTissueLaser from './pages/services/technology/SoftTissueLaser';
+
+// Import general dentistry pages
+import ChildrensDentistry from './pages/services/general/ChildrensDentistry';
+import CleaningsAndExams from './pages/services/general/CleaningsAndExams';
+import DentalSealants from './pages/services/general/DentalSealants';
+import EmergencyDentistry from './pages/services/general/EmergencyDentistry';
+import FluorideTreatments from './pages/services/general/FluorideTreatments';
+import NightGuards from './pages/services/general/NightGuards';
+import CancerScreenings from './pages/services/general/CancerScreenings';
+import HygieneCounseling from './pages/services/general/HygieneCounseling';
+import ScalingRootPlaning from './pages/services/general/ScalingRootPlaning';
+import SportsGuards from './pages/services/general/SportsGuards';
+import TMJTreatments from './pages/services/general/TMJTreatments';
+import ToothExtractions from './pages/services/general/ToothExtractions';
+
 function App() {
   return (
     <Router>
@@ -45,8 +64,25 @@ function App() {
               <Route path="six-month-smiles" element={<SixMonthSmiles />} />
               <Route path="teeth-whitening" element={<TeethWhitening />} />
             </Route>
-            <Route path="/services/technology" element={<DentalTechnology />} />
-            <Route path="/services/general" element={<GeneralDentistry />} />
+            <Route path="/services/technology" element={<DentalTechnology />}>
+              <Route path="digital-xrays" element={<DigitalXrays />} />
+              <Route path="intraoral-scanner" element={<IntraoralScanner />} />
+              <Route path="soft-tissue-laser" element={<SoftTissueLaser />} />
+            </Route>
+            <Route path="/services/general" element={<GeneralDentistry />}>
+              <Route path="childrens-dentistry" element={<ChildrensDentistry />} />
+              <Route path="cleanings-and-exams" element={<CleaningsAndExams />} />
+              <Route path="dental-sealants" element={<DentalSealants />} />
+              <Route path="emergency" element={<EmergencyDentistry />} />
+              <Route path="fluoride" element={<FluorideTreatments />} />
+              <Route path="night-guards" element={<NightGuards />} />
+              <Route path="cancer-screenings" element={<CancerScreenings />} />
+              <Route path="hygiene-counseling" element={<HygieneCounseling />} />
+              <Route path="scaling-root-planing" element={<ScalingRootPlaning />} />
+              <Route path="sports-guards" element={<SportsGuards />} />
+              <Route path="tmj" element={<TMJTreatments />} />
+              <Route path="extractions" element={<ToothExtractions />} />
+            </Route>
             <Route path="/services/medspa" element={<Medspa />} />
             <Route path="/services/orthodontic" element={<OrthodonticTreatments />} />
             <Route path="/services/restorative" element={<RestorativeDentistry />} />
