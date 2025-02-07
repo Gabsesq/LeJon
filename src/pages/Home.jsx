@@ -2,9 +2,15 @@ import { useState } from 'react';
 import '../styles/Home.css';
 import AppointmentPopup from '../components/AppointmentPopup';
 import { Scene3D } from '../components/Scene3D';
+import ServicesShowcase from '../components/ServicesShowcase';
 
 const Home = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handlePayNowClick = () => {
+    // You can replace this with your payment portal URL
+    window.open('https://your-payment-portal-url.com', '_blank');
+  };
 
   return (
     <div className="home">
@@ -22,12 +28,20 @@ const Home = () => {
       </div>
       
       <div className="appointment-section">
-        <button 
-          className="btn-primary"
-          onClick={() => setIsPopupOpen(true)}
-        >
-          Request Appointment
-        </button>
+        <div className="button-group">
+          <button 
+            className="btn-primary"
+            onClick={() => setIsPopupOpen(true)}
+          >
+            Request Appointment
+          </button>
+          <button 
+            className="btn-primary btn-pay"
+            onClick={handlePayNowClick}
+          >
+            Pay Now
+          </button>
+        </div>
       </div>
 
       <div className="container hero-content-bottom">
@@ -56,6 +70,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      <ServicesShowcase />
       
       <AppointmentPopup 
         isOpen={isPopupOpen} 

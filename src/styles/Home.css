@@ -75,12 +75,16 @@
   margin-bottom: 1.5rem;
 }
 
-.welcome-text {
-  font-size: 1.2rem;
+.hero-content-bottom .welcome-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem !important; /* This is 14px */
   line-height: 1.6;
   color: var(--dark-grey);
-  max-width: 900px;
+  max-width: 80%;
   margin: 0 auto;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .features {
@@ -140,4 +144,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-pay {
+  background-color: var(--dark-brown); /* Different color to distinguish */
+}
+
+.btn-pay:hover {
+  background-color: var(--burnt-orange);
+}
+
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+  }
 } 

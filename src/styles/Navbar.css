@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .navbar {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -9,6 +16,7 @@
   z-index: 1000;
   display: flex;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .navbar-content {
@@ -39,13 +47,16 @@
   gap: 2rem;
 }
 
-.nav-links a {
-  font-family: var(--font-serif);
+.nav-links a, 
+.nav-links span,
+.dropdown-trigger,
+.dropdown-content a {
+  font-family: 'Roboto', sans-serif !important;
   text-decoration: none;
   color: var(--dark-grey);
   font-weight: normal;
   transition: color 0.3s ease;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .nav-links a:hover {
@@ -60,7 +71,6 @@
 .dropdown-trigger {
   color: var(--dark-grey);
   cursor: pointer;
-  font-family: var(--font-serif);
   font-size: 20px;
   transition: color 0.3s ease;
 }
