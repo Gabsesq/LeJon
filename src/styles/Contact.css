@@ -1,0 +1,125 @@
+.contact {
+  padding-top: 10vh;
+  padding-bottom: 4rem;
+}
+
+.contact h1 {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  color: var(--burnt-orange);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.welcome-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: var(--dark-grey);
+}
+
+.contact-details {
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.contact-details h2 {
+  font-family: var(--font-serif);
+  color: var(--dark-brown);
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.phone {
+  font-size: 1.8rem;
+  color: var(--burnt-orange);
+  margin-bottom: 1rem;
+}
+
+.address {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--dark-grey);
+}
+
+.hours-section {
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hours-section h2 {
+  font-family: var(--font-serif);
+  color: var(--dark-brown);
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table td {
+  padding: 1rem 0;
+  color: var(--dark-grey);
+  font-size: 1.3rem;
+}
+
+.hours-table td:first-child {
+  font-family: var(--font-serif);
+  width: 40%;
+}
+
+.hours-note {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--dark-grey);
+  font-style: italic;
+}
+
+.map-section {
+  margin-top: 4rem;
+}
+
+.map-section h2 {
+  font-family: var(--font-serif);
+  color: var(--dark-brown);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .map-container iframe {
+    height: 350px;
+  }
+} 
