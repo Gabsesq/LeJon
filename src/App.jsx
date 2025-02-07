@@ -22,6 +22,12 @@ import Invisalign from './pages/services/cosmetic/Invisalign';
 import SixMonthSmiles from './pages/services/cosmetic/SixMonthSmiles';
 import TeethWhitening from './pages/services/cosmetic/TeethWhitening';
 
+// Import resource pages
+import NewPatients from './pages/resources/NewPatients';
+import Insurance from './pages/resources/Insurance';
+import PatientForms from './pages/resources/PatientForms';
+import FAQ from './pages/resources/FAQ';
+
 function App() {
   return (
     <Router>
@@ -48,6 +54,10 @@ function App() {
             <Route path="/services/sleep-apnea" element={<SleepApnea />} />
             <Route path="/resources" element={<PatientResources />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/resources/new-patients" element={<NewPatients />} />
+            <Route path="/resources/insurance" element={<Insurance />} />
+            <Route path="/resources/forms" element={<PatientForms />} />
+            <Route path="/resources/faq" element={<FAQ />} />
           </Routes>
           <Footer />
         </div>

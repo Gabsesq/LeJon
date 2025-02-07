@@ -30,7 +30,15 @@ const Navbar = () => {
               <Link to="/services/sleep-apnea">Sleep Apnea Treatments</Link>
             </div>
           </div>
-          <Link to="/resources">Patient Resources</Link>
+          <div className="dropdown">
+            <span className="dropdown-trigger">Patient Resources</span>
+            <div className="dropdown-content">
+              <Link to="/resources/new-patients">New Patients</Link>
+              <Link to="/resources/insurance">Insurance & Financing</Link>
+              <Link to="/resources/forms">Patient Forms</Link>
+              <Link to="/resources/faq">FAQ</Link>
+            </div>
+          </div>
           <Link to="/contact">Contact</Link>
         </div>
       </div>
