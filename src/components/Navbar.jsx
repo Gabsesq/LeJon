@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import '../styles/Navbar.css';
 
 const resourcesDropdown = [
@@ -25,22 +26,40 @@ const resourcesDropdown = [
 ];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="container navbar-content">
         <Link to="/" className="logo">
           <img src="/OS.png" alt="Oasis Studio" className="logo-image" />
         </Link>
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <div className="dropdown">
+        
+        <button className="hamburger" onClick={toggleMenu}>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+
+        <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <Link to="/" onClick={toggleMenu}>Home</Link>
+          
+          {/* Desktop: dropdown, Mobile: direct link */}
+          <div className="dropdown desktop-only">
             <span className="dropdown-trigger">About</span>
             <div className="dropdown-content">
               <Link to="/about/tour">Tour the Office</Link>
               <Link to="/about/team">Meet the Team</Link>
             </div>
           </div>
-          <div className="dropdown">
+          <Link to="/about/tour" className="mobile-only" onClick={toggleMenu}>About</Link>
+
+          {/* Desktop: dropdown, Mobile: direct link */}
+          <div className="dropdown desktop-only">
             <span className="dropdown-trigger">Services</span>
             <div className="dropdown-content">
               <Link to="/services/cosmetic">Cosmetic Dentistry</Link>
@@ -53,17 +72,20 @@ const Navbar = () => {
               <Link to="/services/sleep-apnea">Sleep Apnea Treatments</Link>
             </div>
           </div>
-          <div className="dropdown">
+          <Link to="/services/general" className="mobile-only" onClick={toggleMenu}>Services</Link>
+
+          {/* Desktop: dropdown, Mobile: direct link */}
+          <div className="dropdown desktop-only">
             <span className="dropdown-trigger">Patient Resources</span>
             <div className="dropdown-content">
               {resourcesDropdown.map((item) => (
-                <Link key={item.path} to={item.path}>
-                  {item.name}
-                </Link>
+                <Link key={item.path} to={item.path}>{item.name}</Link>
               ))}
             </div>
           </div>
-          <Link to="/contact">Contact</Link>
+          <Link to="/resources" className="mobile-only" onClick={toggleMenu}>Patient Resources</Link>
+
+          <Link to="/contact" onClick={toggleMenu}>Contact</Link>
         </div>
       </div>
     </nav>
