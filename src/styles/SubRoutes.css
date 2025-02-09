@@ -1,0 +1,119 @@
+.sub-route {
+  padding-top: 10vh; /* This matches the navbar height */
+  padding-bottom: 4rem;
+}
+
+.sub-route h1 {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  color: var(--burnt-orange);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sub-route .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sub-route .welcome-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--dark-grey);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .sub-route h1 {
+    font-size: 3rem;
+  }
+
+  .sub-route .welcome-text {
+    font-size: 1.6rem;
+  }
+}
+
+/* Team page specific styles */
+.team-section {
+  margin-top: 2rem;
+}
+
+.team-section h2 {
+  font-family: var(--font-serif);
+  color: var(--dark-brown);
+  font-size: 2.5rem;
+  margin: 3rem 0 2rem;
+  text-align: center;
+}
+
+.team-member {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: var(--light-grey);
+  border-radius: 12px;
+}
+
+.member-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #ddd; /* Placeholder for images */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info h3 {
+  font-family: var(--font-serif);
+  color: var(--burnt-orange);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.member-info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.3rem;
+  color: var(--dark-grey);
+}
+
+.team-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 4rem auto;
+}
+
+.team-intro p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--dark-grey);
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .member-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .member-info p {
+    font-size: 1.1rem;
+  }
+
+  .team-intro p {
+    font-size: 1.1rem;
+  }
+} 
