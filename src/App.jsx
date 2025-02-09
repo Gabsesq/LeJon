@@ -26,7 +26,7 @@ import TeethWhitening from './pages/services/cosmetic/TeethWhitening';
 import NewPatients from './pages/resources/NewPatients';
 import Insurance from './pages/resources/Insurance';
 import PatientForms from './pages/resources/PatientForms';
-import FAQ from './pages/resources/FAQ';
+
 
 // Import technology pages
 import DigitalXrays from './pages/services/technology/DigitalXrays';

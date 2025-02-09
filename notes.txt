@@ -9,3 +9,9 @@ light grey: ebebec
 fonts: 
 Branch - https://www.myfonts.com/products/regular-hello-branch-77398/licenses?queryId=ae7b29e80a9322450e38059768a0fc24&index=universal_search_data&objectIDs=5427512002
 Century Gothic Pro
+
+Use SubRoutes.css for all subroutes.
+
+
+-needs pics, stock and office
+-
