@@ -65,13 +65,13 @@ export function Scene3D() {
         <ambientLight intensity={0.3} />
         <directionalLight 
           position={[10, 10, 5]} 
-          intensity={20}
-          color="#786101"
+          intensity={10}
+          color="#FFF59C"
         />
         <directionalLight 
           position={[-10, -10, -5]} 
-          intensity={10}
-          color="#F2984E"
+          intensity={3}
+          color="#FFC89C"
         />
 
         {/* Light direction indicators */}
