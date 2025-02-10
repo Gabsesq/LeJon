@@ -1,36 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import { useGLTF, OrbitControls, Stage, PerspectiveCamera } from '@react-three/drei';
 import { Suspense } from 'react';
-import * as THREE from 'three';
-
-function LightDirection({ start, end, color = "red" }) {
-  // Scale up the direction vector to make lines longer
-  const direction = [
-    end[0] - start[0],
-    end[1] - start[1],
-    end[2] - start[2]
-  ];
-  const scaleFactor = 400; // Increase this to make lines longer
-  const extendedEnd = [
-    start[0] + direction[0] * scaleFactor,
-    start[1] + direction[1] * scaleFactor,
-    start[2] + direction[2] * scaleFactor
-  ];
-
-  return (
-    <line>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={2}
-          array={new Float32Array([...start, ...extendedEnd])}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <lineBasicMaterial color={color} linewidth={10} /> {/* Increase linewidth */}
-    </line>
-  );
-}
 
 function Model({ url, scale = 1.5, position, rotation }) {
   const { scene } = useGLTF(url);
@@ -62,28 +32,16 @@ export function Scene3D() {
         <PerspectiveCamera makeDefault position={[20, 80, 800]} />
         
         {/* Lights */}
-        <ambientLight intensity={0.3} />
+        <ambientLight intensity={.1} />
         <directionalLight 
           position={[10, 10, 5]} 
-          intensity={10}
-          color="#FFF59C"
+          intensity={3}
+          color="#FEF9CB"
         />
         <directionalLight 
           position={[-10, -10, -5]} 
           intensity={3}
-          color="#FFC89C"
-        />
-
-        {/* Light direction indicators */}
-        <LightDirection 
-          start={[10, 10, 5]} 
-          end={[0, 0, 0]} 
-          color="#FF0000"
-        />
-        <LightDirection 
-          start={[-10, -10, -5]} 
-          end={[0, 0, 0]} 
-          color="#FFD700"
+          color="#FEF9CB"
         />
 
         <Stage

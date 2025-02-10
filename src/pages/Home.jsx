@@ -17,6 +17,9 @@ const Home = () => {
       <header className="hero">
         <div className="container hero-content">
           <h1>OASIS STUDIO</h1>
+          <h2 className="hero-subtitle">
+            Your Oasis Awaits—Indulge in Exceptional Dentistry and Medspa Treatments Today!
+          </h2>
         </div>
       </header>
 
