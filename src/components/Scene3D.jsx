@@ -43,6 +43,13 @@ export function Scene3D() {
           intensity={3}
           color="#FEF9CB"
         />
+        {/* Front-facing light */}
+        <directionalLight 
+          position={[20, 80, 800]} // Matches camera position
+          intensity={1.1}
+          color="#FEF5A6"
+          target-position={[0, 0, 0]} // Points to center
+        />
 
         <Stage
           environment="city"
@@ -51,14 +58,14 @@ export function Scene3D() {
         >
           <Model 
             url="/toothbrush.1.glb" 
-            position={[-30, 150, 20]}
-            scale={3.3}
+            position={[-30, 140, 20]}
+            scale={3.1}
             rotation={[0, -.9, .5]}
           />
           <Model 
             url="/tube_3d.glb" 
             position={[-40, -100, -80]}
-            scale={250}
+            scale={240}
             rotation={[0, -.8, -.4]}
           />
         </Stage>

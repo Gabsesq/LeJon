@@ -58,7 +58,7 @@
   font-weight: normal;
   color: var(--burnt-orange);
   margin: 0;
-  line-height: 1;
+  line-height: .8;
   letter-spacing: 0.02em;
 }
 
